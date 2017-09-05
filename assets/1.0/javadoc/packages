@@ -1,3 +1,4 @@
+org.fujion.common
 org.fujion.ancillary
 org.fujion.annotation
 org.fujion.client
@@ -16,3 +17,15 @@ org.fujion.spring
 org.fujion.taglib
 org.fujion.theme
 org.fujion.websocket
+org.fujion.test
+org.fujion.script.clojure
+org.fujion.script.groovy
+org.fujion.script.jruby
+org.fujion.script.jython
+org.fujion.script.renjin
+org.fujion.highcharts
+org.fujion.codemirror
+org.fujion.sandbox
+org.fujion.angular
+org.fujion.react
+org.fujion.testharness
