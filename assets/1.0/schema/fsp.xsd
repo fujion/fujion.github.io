@@ -595,10 +595,8 @@
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="maxlength" type="xs:integer"/>
-            <xs:attribute name="maxValue" type="xs:string"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
-            <xs:attribute name="minValue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
@@ -794,10 +792,8 @@
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="maxlength" type="xs:integer"/>
-            <xs:attribute name="maxValue" type="xs:string"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
-            <xs:attribute name="minValue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
@@ -1129,10 +1125,8 @@
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="maxlength" type="xs:integer"/>
-            <xs:attribute name="maxValue" type="xs:string"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
-            <xs:attribute name="minValue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
@@ -1305,10 +1299,8 @@
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="maxlength" type="xs:integer"/>
-            <xs:attribute name="maxValue" type="xs:string"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
-            <xs:attribute name="minValue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
@@ -1329,6 +1321,7 @@
             <xs:attribute name="autoScroll" type="xs:boolean"/>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
+            <xs:attribute name="cols" type="xs:integer"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
@@ -2057,7 +2050,7 @@
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
-            <xs:attribute name="maxValue" type="xs:integer"/>
+            <xs:attribute name="maxvalue" type="xs:integer"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
@@ -2418,8 +2411,8 @@
             <xs:attribute name="if" type="xs:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxValue" type="xs:integer"/>
-            <xs:attribute name="minValue" type="xs:integer"/>
+            <xs:attribute name="maxvalue" type="xs:integer"/>
+            <xs:attribute name="minvalue" type="xs:integer"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="xs:boolean"/>
             <xs:attribute name="orientation">
