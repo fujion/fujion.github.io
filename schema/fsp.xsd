@@ -524,14 +524,21 @@
                     <xs:attribute name="content" type="xs:string"/>
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
-                    <xs:attribute name="defer" type="xs:boolean"/>
                     <xs:attribute name="forward" type="xs:string"/>
                     <xs:attribute name="if" type="xs:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
+                    <xs:attribute name="mode">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="defer"/>
+                                <xs:enumeration value="immediate"/>
+                                <xs:enumeration value="manual"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
                     <xs:attribute name="name" type="xs:string"/>
                     <xs:attribute name="namespace" type="xs:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
-                    <xs:attribute name="type" type="xs:string"/>
                     <xs:attribute name="unless" type="xs:boolean"/>
                 </xs:extension>
             </xs:simpleContent>
@@ -1760,6 +1767,7 @@
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:upload"/>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:window"/>
             </xs:all>
+            <xs:attribute name="closable" type="xs:boolean"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
@@ -2545,10 +2553,18 @@
                     <xs:attribute name="content" type="xs:string"/>
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
-                    <xs:attribute name="defer" type="xs:boolean"/>
                     <xs:attribute name="forward" type="xs:string"/>
                     <xs:attribute name="if" type="xs:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
+                    <xs:attribute name="mode">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="defer"/>
+                                <xs:enumeration value="immediate"/>
+                                <xs:enumeration value="manual"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
                     <xs:attribute name="name" type="xs:string"/>
                     <xs:attribute name="namespace" type="xs:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
