@@ -1,6 +1,9 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="boolean">
+        <xs:union memberTypes="xs:boolean fsp:el"/>
+    </xs:simpleType>
     <xs:simpleType name="button_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="left"/>
@@ -10,7 +13,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="caption_alignment">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="center"/>
@@ -21,7 +24,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="caption_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="bottom"/>
@@ -33,7 +36,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="checkbox_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="left"/>
@@ -43,7 +46,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="column_sortOrder">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="ascending"/>
@@ -55,7 +58,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="column_sortToggle">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="binary"/>
@@ -65,7 +68,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="cscript_mode">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="defer"/>
@@ -75,22 +78,19 @@
             </xs:simpleType>
         </xs:union>
     </xs:simpleType>
-    <xs:simpleType name="fujion_boolean">
-        <xs:union memberTypes="xs:boolean fsp:fujion_el"/>
+    <xs:simpleType name="decimal">
+        <xs:union memberTypes="xs:decimal fsp:el"/>
     </xs:simpleType>
-    <xs:simpleType name="fujion_decimal">
-        <xs:union memberTypes="xs:decimal fsp:fujion_el"/>
-    </xs:simpleType>
-    <xs:simpleType name="fujion_el">
+    <xs:simpleType name="el">
         <xs:restriction base="xs:string">
             <xs:pattern value=".*\$\{.+\}.*"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:simpleType name="fujion_integer">
-        <xs:union memberTypes="xs:integer fsp:fujion_el"/>
+    <xs:simpleType name="integer">
+        <xs:union memberTypes="xs:integer fsp:el"/>
     </xs:simpleType>
     <xs:simpleType name="link_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="left"/>
@@ -100,7 +100,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="memobox_wrap">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="hard"/>
@@ -110,7 +110,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="paneview_orientation">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="horizontal"/>
@@ -120,7 +120,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="radiobutton_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="left"/>
@@ -130,7 +130,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="radiogroup_orientation">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="horizontal"/>
@@ -140,7 +140,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="rows_selectable">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="multiple"/>
@@ -151,7 +151,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="slider_orientation">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="horizontal"/>
@@ -161,7 +161,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="snippet_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="after"/>
@@ -174,7 +174,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="sscript_mode">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="defer"/>
@@ -185,7 +185,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="tabview_tabPosition">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="bottom"/>
@@ -197,7 +197,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="toolbar_alignment">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="center"/>
@@ -208,7 +208,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="toolbar_orientation">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="horizontal"/>
@@ -218,7 +218,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="window_closeAction">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="destroy"/>
@@ -229,7 +229,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="window_mode">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="inline"/>
@@ -240,7 +240,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="window_position">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="center"/>
@@ -257,7 +257,7 @@
         </xs:union>
     </xs:simpleType>
     <xs:simpleType name="window_size">
-        <xs:union memberTypes="fsp:fujion_el">
+        <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="maximized"/>
@@ -275,27 +275,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:button_position"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -359,26 +359,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:caption_position"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -441,25 +441,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -467,32 +467,32 @@
     <xs:element name="checkbox">
         <xs:complexType>
             <xs:attribute name="balloon" type="xs:string"/>
-            <xs:attribute name="checked" type="fsp:fujion_boolean"/>
+            <xs:attribute name="checked" type="fsp:boolean"/>
             <xs:attribute name="class" type="xs:string"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:checkbox_position"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -508,34 +508,34 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showHints" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showText" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
+            <xs:attribute name="showHints" type="fsp:boolean"/>
+            <xs:attribute name="showText" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -545,11 +545,11 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -612,30 +612,30 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="sortBy" type="xs:string"/>
-            <xs:attribute name="sortColumn" type="fsp:fujion_boolean"/>
+            <xs:attribute name="sortColumn" type="fsp:boolean"/>
             <xs:attribute name="sortOrder" type="fsp:column_sortOrder"/>
             <xs:attribute name="sortToggle" type="fsp:column_sortToggle"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -651,24 +651,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -678,39 +678,39 @@
             <xs:all>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:comboitem"/>
             </xs:all>
-            <xs:attribute name="autoFilter" type="fsp:fujion_boolean"/>
+            <xs:attribute name="autoFilter" type="fsp:boolean"/>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -723,27 +723,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="selected" type="fsp:fujion_boolean"/>
+            <xs:attribute name="selected" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -756,13 +756,13 @@
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
                     <xs:attribute name="forward" type="xs:string"/>
-                    <xs:attribute name="if" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="if" type="fsp:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
                     <xs:attribute name="mode" type="fsp:cscript_mode"/>
                     <xs:attribute name="name" type="xs:string"/>
-                    <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
-                    <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="unless" type="fsp:boolean"/>
                     <xs:anyAttribute namespace="##any" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
@@ -776,33 +776,33 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="format" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -815,32 +815,32 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -903,26 +903,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="open" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="open" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -985,24 +985,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1015,32 +1015,32 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1057,25 +1057,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1138,25 +1138,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1172,25 +1172,25 @@
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="css" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
-                    <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="disabled" type="fsp:boolean"/>
                     <xs:attribute name="dragid" type="xs:string"/>
                     <xs:attribute name="dropid" type="xs:string"/>
                     <xs:attribute name="flex" type="xs:string"/>
-                    <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="focus" type="fsp:boolean"/>
                     <xs:attribute name="forward" type="xs:string"/>
                     <xs:attribute name="height" type="xs:string"/>
                     <xs:attribute name="hint" type="xs:string"/>
-                    <xs:attribute name="if" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="if" type="fsp:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
                     <xs:attribute name="keycapture" type="xs:string"/>
                     <xs:attribute name="name" type="xs:string"/>
-                    <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="popup" type="xs:string"/>
                     <xs:attribute name="src" type="xs:string"/>
                     <xs:attribute name="style" type="xs:string"/>
-                    <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-                    <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-                    <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="tabindex" type="fsp:integer"/>
+                    <xs:attribute name="unless" type="fsp:boolean"/>
+                    <xs:attribute name="visible" type="fsp:boolean"/>
                     <xs:attribute name="width" type="xs:string"/>
                     <xs:anyAttribute namespace="##any" processContents="lax"/>
                 </xs:extension>
@@ -1205,26 +1205,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="sandbox" type="xs:string"/>
             <xs:attribute name="src" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1238,25 +1238,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="src" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1272,34 +1272,34 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showHints" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showText" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
+            <xs:attribute name="showHints" type="fsp:boolean"/>
+            <xs:attribute name="showText" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1309,11 +1309,11 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1326,25 +1326,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="src" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1357,32 +1357,32 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1395,25 +1395,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1426,29 +1426,29 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
             <xs:attribute name="href" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:link_position"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="target" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1464,26 +1464,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="multiple" type="fsp:fujion_boolean"/>
+            <xs:attribute name="multiple" type="fsp:boolean"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="size" type="fsp:fujion_integer"/>
+            <xs:attribute name="size" type="fsp:integer"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1496,27 +1496,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="selected" type="fsp:fujion_boolean"/>
+            <xs:attribute name="selected" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1529,74 +1529,74 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="memobox">
         <xs:complexType>
-            <xs:attribute name="autoScroll" type="fsp:fujion_boolean"/>
+            <xs:attribute name="autoScroll" type="fsp:boolean"/>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
-            <xs:attribute name="cols" type="fsp:fujion_integer"/>
+            <xs:attribute name="cols" type="fsp:integer"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
-            <xs:attribute name="rows" type="fsp:fujion_integer"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
+            <xs:attribute name="rows" type="fsp:integer"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="synchronized" type="fsp:fujion_boolean"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="synchronized" type="fsp:boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:attribute name="wrap" type="fsp:memobox_wrap"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
@@ -1615,27 +1615,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="open" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="open" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1648,26 +1648,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1680,33 +1680,33 @@
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:menuseparator"/>
             </xs:all>
             <xs:attribute name="balloon" type="xs:string"/>
-            <xs:attribute name="checkable" type="fsp:fujion_boolean"/>
-            <xs:attribute name="checked" type="fsp:fujion_boolean"/>
+            <xs:attribute name="checkable" type="fsp:boolean"/>
+            <xs:attribute name="checked" type="fsp:boolean"/>
             <xs:attribute name="class" type="xs:string"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1721,11 +1721,11 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -1737,24 +1737,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1817,24 +1817,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1850,24 +1850,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -1930,24 +1930,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2005,16 +2005,16 @@
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:upload"/>
                 <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:window"/>
             </xs:all>
-            <xs:attribute name="closable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="closable" type="fsp:boolean"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -2025,29 +2025,29 @@
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
-            <xs:attribute name="currentPage" type="fsp:fujion_integer"/>
+            <xs:attribute name="currentPage" type="fsp:integer"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="pageSize" type="fsp:fujion_integer"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="pageSize" type="fsp:integer"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="target" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2110,26 +2110,26 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="splittable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="splittable" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2145,25 +2145,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="orientation" type="fsp:paneview_orientation"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2223,11 +2223,11 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -2242,35 +2242,35 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="masked" type="fsp:fujion_boolean"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="masked" type="fsp:boolean"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="open" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="open" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="synchronized" type="fsp:fujion_boolean"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="synchronized" type="fsp:boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2283,27 +2283,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
-            <xs:attribute name="maxvalue" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxvalue" type="fsp:integer"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="value" type="fsp:fujion_integer"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="value" type="fsp:integer"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2311,32 +2311,32 @@
     <xs:element name="radiobutton">
         <xs:complexType>
             <xs:attribute name="balloon" type="xs:string"/>
-            <xs:attribute name="checked" type="fsp:fujion_boolean"/>
+            <xs:attribute name="checked" type="fsp:boolean"/>
             <xs:attribute name="class" type="xs:string"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:radiobutton_position"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2399,25 +2399,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="orientation" type="fsp:radiogroup_orientation"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2481,25 +2481,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="selected" type="fsp:fujion_boolean"/>
+            <xs:attribute name="selected" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2558,31 +2558,31 @@
             </xs:all>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
-            <xs:attribute name="colspan" type="fsp:fujion_integer"/>
+            <xs:attribute name="colspan" type="fsp:integer"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="rowspan" type="fsp:fujion_integer"/>
+            <xs:attribute name="rowspan" type="fsp:integer"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2598,25 +2598,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="selectable" type="fsp:rows_selectable"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2629,30 +2629,30 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxvalue" type="fsp:fujion_integer"/>
-            <xs:attribute name="minvalue" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxvalue" type="fsp:integer"/>
+            <xs:attribute name="minvalue" type="fsp:integer"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="orientation" type="fsp:slider_orientation"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="step" type="fsp:fujion_integer"/>
+            <xs:attribute name="step" type="fsp:integer"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="synchronized" type="fsp:fujion_boolean"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="value" type="fsp:fujion_integer"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="synchronized" type="fsp:boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="value" type="fsp:integer"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2663,13 +2663,13 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="position" type="fsp:snippet_position"/>
             <xs:attribute name="src" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -2731,24 +2731,24 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2761,14 +2761,14 @@
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
                     <xs:attribute name="forward" type="xs:string"/>
-                    <xs:attribute name="if" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="if" type="fsp:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
                     <xs:attribute name="mode" type="fsp:sscript_mode"/>
                     <xs:attribute name="name" type="xs:string"/>
-                    <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
                     <xs:attribute name="type" type="xs:string"/>
-                    <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="unless" type="fsp:boolean"/>
                     <xs:anyAttribute namespace="##any" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
@@ -2782,12 +2782,12 @@
                     <xs:attribute name="controller" type="xs:string"/>
                     <xs:attribute name="data" type="xs:string"/>
                     <xs:attribute name="forward" type="xs:string"/>
-                    <xs:attribute name="if" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="if" type="fsp:boolean"/>
                     <xs:attribute name="impl" type="xs:string"/>
                     <xs:attribute name="name" type="xs:string"/>
-                    <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
-                    <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+                    <xs:attribute name="unless" type="fsp:boolean"/>
                     <xs:anyAttribute namespace="##any" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
@@ -2847,32 +2847,32 @@
             </xs:all>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
-            <xs:attribute name="closable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="closable" type="fsp:boolean"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="selected" type="fsp:fujion_boolean"/>
+            <xs:attribute name="selected" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2888,25 +2888,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="tabPosition" type="fsp:tabview_tabPosition"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2919,12 +2919,12 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="src" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -2936,34 +2936,34 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="masked" type="fsp:fujion_boolean"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="masked" type="fsp:boolean"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="synchronized" type="fsp:fujion_boolean"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="synchronized" type="fsp:boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -2976,33 +2976,33 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="format" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxlength" type="fsp:fujion_integer"/>
+            <xs:attribute name="maxlength" type="fsp:integer"/>
             <xs:attribute name="maxvalue" type="xs:string"/>
             <xs:attribute name="minvalue" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="pattern" type="xs:string"/>
             <xs:attribute name="placeholder" type="xs:string"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="readonly" type="fsp:fujion_boolean"/>
-            <xs:attribute name="required" type="fsp:fujion_boolean"/>
+            <xs:attribute name="readonly" type="fsp:boolean"/>
+            <xs:attribute name="required" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -3012,14 +3012,14 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="interval" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
-            <xs:attribute name="repeat" type="fsp:fujion_integer"/>
-            <xs:attribute name="running" type="fsp:fujion_boolean"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
+            <xs:attribute name="repeat" type="fsp:integer"/>
+            <xs:attribute name="running" type="fsp:boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
     </xs:element>
@@ -3082,25 +3082,25 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="orientation" type="fsp:toolbar_orientation"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -3112,32 +3112,32 @@
             </xs:all>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
-            <xs:attribute name="collapsed" type="fsp:fujion_boolean"/>
+            <xs:attribute name="collapsed" type="fsp:boolean"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="selected" type="fsp:fujion_boolean"/>
+            <xs:attribute name="selected" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -3153,27 +3153,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="showLines" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showRoot" type="fsp:fujion_boolean"/>
-            <xs:attribute name="showToggles" type="fsp:fujion_boolean"/>
+            <xs:attribute name="showLines" type="fsp:boolean"/>
+            <xs:attribute name="showRoot" type="fsp:boolean"/>
+            <xs:attribute name="showToggles" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -3187,27 +3187,27 @@
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maxsize" type="fsp:fujion_integer"/>
-            <xs:attribute name="multiple" type="fsp:fujion_boolean"/>
+            <xs:attribute name="maxsize" type="fsp:integer"/>
+            <xs:attribute name="multiple" type="fsp:boolean"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
-            <xs:attribute name="progress" type="fsp:fujion_boolean"/>
+            <xs:attribute name="progress" type="fsp:boolean"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
@@ -3266,39 +3266,39 @@
             </xs:all>
             <xs:attribute name="balloon" type="xs:string"/>
             <xs:attribute name="class" type="xs:string"/>
-            <xs:attribute name="closable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="closable" type="fsp:boolean"/>
             <xs:attribute name="closeAction" type="fsp:window_closeAction"/>
             <xs:attribute name="context" type="xs:string"/>
             <xs:attribute name="controller" type="xs:string"/>
             <xs:attribute name="css" type="xs:string"/>
             <xs:attribute name="data" type="xs:string"/>
-            <xs:attribute name="disabled" type="fsp:fujion_boolean"/>
+            <xs:attribute name="disabled" type="fsp:boolean"/>
             <xs:attribute name="dragid" type="xs:string"/>
             <xs:attribute name="dropid" type="xs:string"/>
             <xs:attribute name="flex" type="xs:string"/>
-            <xs:attribute name="focus" type="fsp:fujion_boolean"/>
+            <xs:attribute name="focus" type="fsp:boolean"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
-            <xs:attribute name="if" type="fsp:fujion_boolean"/>
+            <xs:attribute name="if" type="fsp:boolean"/>
             <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
-            <xs:attribute name="maximizable" type="fsp:fujion_boolean"/>
-            <xs:attribute name="minimizable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="maximizable" type="fsp:boolean"/>
+            <xs:attribute name="minimizable" type="fsp:boolean"/>
             <xs:attribute name="mode" type="fsp:window_mode"/>
-            <xs:attribute name="movable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="movable" type="fsp:boolean"/>
             <xs:attribute name="name" type="xs:string"/>
-            <xs:attribute name="namespace" type="fsp:fujion_boolean"/>
+            <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="popup" type="xs:string"/>
             <xs:attribute name="position" type="fsp:window_position"/>
-            <xs:attribute name="sizable" type="fsp:fujion_boolean"/>
+            <xs:attribute name="sizable" type="fsp:boolean"/>
             <xs:attribute name="size" type="fsp:window_size"/>
             <xs:attribute name="style" type="xs:string"/>
-            <xs:attribute name="tabindex" type="fsp:fujion_integer"/>
+            <xs:attribute name="tabindex" type="fsp:integer"/>
             <xs:attribute name="title" type="xs:string"/>
-            <xs:attribute name="unless" type="fsp:fujion_boolean"/>
-            <xs:attribute name="visible" type="fsp:fujion_boolean"/>
+            <xs:attribute name="unless" type="fsp:boolean"/>
+            <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:anyAttribute namespace="##any" processContents="lax"/>
         </xs:complexType>
