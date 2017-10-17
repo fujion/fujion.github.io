@@ -732,6 +732,7 @@
             <xs:attribute name="height" type="xs:string"/>
             <xs:attribute name="hint" type="xs:string"/>
             <xs:attribute name="if" type="fsp:boolean"/>
+            <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="keycapture" type="xs:string"/>
             <xs:attribute name="label" type="xs:string"/>
