@@ -1,6 +1,6 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page Schema, version 1.1</xs:documentation>
+        <xs:documentation>Fujion Server Page Schema, version 1.0</xs:documentation>
     </xs:annotation>
     <xs:simpleType name="boolean">
         <xs:union memberTypes="xs:boolean fsp:el"/>
@@ -300,7 +300,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="caption">
@@ -383,7 +383,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="cell">
@@ -464,7 +464,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="checkbox">
@@ -497,7 +497,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="colorpicker">
@@ -540,7 +540,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="colorpickeritem">
@@ -554,7 +554,7 @@
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="column">
@@ -640,7 +640,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="columns">
@@ -673,7 +673,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="combobox">
@@ -715,7 +715,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="comboitem">
@@ -749,7 +749,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="cscript">
@@ -767,7 +767,7 @@
                     <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
                     <xs:attribute name="unless" type="fsp:boolean"/>
-                    <xs:anyAttribute namespace="##any" processContents="lax"/>
+                    <xs:anyAttribute namespace="##other" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
@@ -808,7 +808,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="decimalbox">
@@ -846,7 +846,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="detail">
@@ -928,7 +928,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="div">
@@ -1008,7 +1008,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="doublebox">
@@ -1046,7 +1046,14 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="fsp">
+        <xs:complexType mixed="true">
+            <xs:all>
+                <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
+            </xs:all>
         </xs:complexType>
     </xs:element>
     <xs:element name="grid">
@@ -1081,7 +1088,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="groupbox">
@@ -1162,7 +1169,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="html">
@@ -1196,7 +1203,7 @@
                     <xs:attribute name="unless" type="fsp:boolean"/>
                     <xs:attribute name="visible" type="fsp:boolean"/>
                     <xs:attribute name="width" type="xs:string"/>
-                    <xs:anyAttribute namespace="##any" processContents="lax"/>
+                    <xs:anyAttribute namespace="##other" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
@@ -1230,7 +1237,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="image">
@@ -1262,7 +1269,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="imagepicker">
@@ -1305,7 +1312,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="imagepickeritem">
@@ -1319,7 +1326,7 @@
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="value" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="import">
@@ -1350,7 +1357,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="integerbox">
@@ -1388,7 +1395,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="label">
@@ -1419,7 +1426,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="link">
@@ -1454,7 +1461,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="listbox">
@@ -1489,7 +1496,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="listitem">
@@ -1522,7 +1529,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="longbox">
@@ -1560,7 +1567,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="memobox">
@@ -1603,7 +1610,7 @@
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
             <xs:attribute name="wrap" type="fsp:memobox_wrap"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="menu">
@@ -1641,7 +1648,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="menuheader">
@@ -1673,7 +1680,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="menuitem">
@@ -1712,7 +1719,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="menupopup">
@@ -1730,7 +1737,7 @@
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="menuseparator">
@@ -1760,7 +1767,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="messagepane">
@@ -1840,7 +1847,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="messagewindow">
@@ -1873,7 +1880,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="namespace">
@@ -1953,7 +1960,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="page">
@@ -2019,7 +2026,7 @@
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="title" type="xs:string"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="paging">
@@ -2053,7 +2060,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="pane">
@@ -2135,7 +2142,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="paneview">
@@ -2169,7 +2176,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="popup">
@@ -2232,7 +2239,7 @@
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="popupbox">
@@ -2276,7 +2283,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="progressbar">
@@ -2309,7 +2316,7 @@
             <xs:attribute name="value" type="fsp:integer"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="radiobutton">
@@ -2342,7 +2349,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="radiogroup">
@@ -2423,7 +2430,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="row">
@@ -2505,7 +2512,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="rowcell">
@@ -2588,7 +2595,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="rows">
@@ -2622,7 +2629,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="slider">
@@ -2658,7 +2665,7 @@
             <xs:attribute name="value" type="fsp:integer"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="snippet">
@@ -2674,7 +2681,7 @@
             <xs:attribute name="position" type="fsp:snippet_position"/>
             <xs:attribute name="src" type="xs:string"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="span">
@@ -2754,7 +2761,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="sscript">
@@ -2773,7 +2780,7 @@
                     <xs:attribute name="src" type="xs:string"/>
                     <xs:attribute name="type" type="xs:string"/>
                     <xs:attribute name="unless" type="fsp:boolean"/>
-                    <xs:anyAttribute namespace="##any" processContents="lax"/>
+                    <xs:anyAttribute namespace="##other" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
@@ -2792,7 +2799,7 @@
                     <xs:attribute name="namespace" type="fsp:boolean"/>
                     <xs:attribute name="src" type="xs:string"/>
                     <xs:attribute name="unless" type="fsp:boolean"/>
-                    <xs:anyAttribute namespace="##any" processContents="lax"/>
+                    <xs:anyAttribute namespace="##other" processContents="lax"/>
                 </xs:extension>
             </xs:simpleContent>
         </xs:complexType>
@@ -2878,7 +2885,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="tabview">
@@ -2912,7 +2919,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="template">
@@ -2929,7 +2936,7 @@
             <xs:attribute name="namespace" type="fsp:boolean"/>
             <xs:attribute name="src" type="xs:string"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="textbox">
@@ -2969,7 +2976,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="timebox">
@@ -3008,7 +3015,7 @@
             <xs:attribute name="value" type="xs:string"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="timer">
@@ -3024,7 +3031,7 @@
             <xs:attribute name="repeat" type="fsp:integer"/>
             <xs:attribute name="running" type="fsp:boolean"/>
             <xs:attribute name="unless" type="fsp:boolean"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="toolbar">
@@ -3106,7 +3113,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="treenode">
@@ -3143,7 +3150,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="treeview">
@@ -3179,7 +3186,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="upload">
@@ -3213,7 +3220,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
     <xs:element name="window">
@@ -3304,7 +3311,7 @@
             <xs:attribute name="unless" type="fsp:boolean"/>
             <xs:attribute name="visible" type="fsp:boolean"/>
             <xs:attribute name="width" type="xs:string"/>
-            <xs:anyAttribute namespace="##any" processContents="lax"/>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
