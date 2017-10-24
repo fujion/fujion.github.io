@@ -2021,6 +2021,7 @@
             <xs:attribute name="data" type="xs:string"/>
             <xs:attribute name="forward" type="xs:string"/>
             <xs:attribute name="if" type="fsp:boolean"/>
+            <xs:attribute name="image" type="xs:string"/>
             <xs:attribute name="impl" type="xs:string"/>
             <xs:attribute name="name" type="xs:string"/>
             <xs:attribute name="namespace" type="fsp:boolean"/>
