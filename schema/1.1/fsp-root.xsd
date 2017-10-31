@@ -18,6 +18,9 @@
     </xs:simpleType>
     <xs:element abstract="true" name="anyParent"/>
     <xs:element name="fsp">
+        <xs:annotation>
+            <xs:documentation>Fujion Server Page root tag.</xs:documentation>
+        </xs:annotation>
         <xs:complexType mixed="true">
             <xs:all>
                 <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
