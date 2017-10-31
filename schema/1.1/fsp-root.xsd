@@ -23,7 +23,7 @@
         </xs:annotation>
         <xs:complexType mixed="true">
             <xs:all>
-                <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace"/>
+                <xs:any maxOccurs="unbounded" minOccurs="0" namespace="##targetNamespace" notQName="fsp:fsp"/>
             </xs:all>
         </xs:complexType>
     </xs:element>
