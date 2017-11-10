@@ -28,4 +28,5 @@ org.fujion.taglib
 org.fujion.test
 org.fujion.testharness
 org.fujion.theme
+org.fujion.webjar
 org.fujion.websocket
