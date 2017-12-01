@@ -1,4 +1,32 @@
 <h2>Fujion Release Notes</h2>
+
+<h3>Version 1.1.3</h3>
+<ul>
+<li>Improvements to resizing logic</li>
+<li>New BaseUIComponent.reportSize method</li>
+<li>New ResizeEvent properties (bottom and right)</li>
+<li>Widget._super method called with no arguments now passes arguments from calling method</li>
+<li>Widget.getAncestor method now accepts constructor or class name</li>
+<li>Improvements to client-side logging</li>
+<li>Fix incorrect method name in CodeMirror widget</li>
+<li>Fix Promise detection logic failure in FireFox</li>
+</ul>
+
+<h3>Version 1.1.2</h3>
+<ul>
+<li>Fix resizing logic</li>
+</ul>
+
+<h3>Version 1.1.1</h3>
+<ul>
+<li>TreeNode now correctly reports "collapsed" property change upon clicking toggle</li>
+<li>Clicking tree node toggle while depressing alt key expands/collapses all child nodes</li>
+<li>Support for custom theme resolvers</li>
+<li>Fix incorrect property name ("bottom" -> "left") for ResizeEvent</li>
+<li>Pane now fires resize event after resizing</li>
+<li>New widget method "reportSize" causes widget to report size via resize event</li>
+</ul>
+
 <h3>Version 1.1.0</h3>
 <ul>
 <li>Extensible and fully annotated FSP schema</li>
@@ -32,27 +60,4 @@
 <li>Rework of theme support using URL rewriting</li>
 <li>Angular container can accept an NgModule object or @NgModule decorated class</li>
 </ul>
-<h3>Version 1.1.1</h3>
-<ul>
-<li>TreeNode now correctly reports "collapsed" property change upon clicking toggle</li>
-<li>Clicking tree node toggle while depressing alt key expands/collapses all child nodes</li>
-<li>Support for custom theme resolvers</li>
-<li>Fix incorrect property name ("bottom" -> "left") for ResizeEvent</li>
-<li>Pane now fires resize event after resizing</li>
-<li>New widget method "reportSize" causes widget to report size via resize event</li>
-</ul>
-<h3>Version 1.1.2</h3>
-<ul>
-<li>Fix resizing logic</li>
-</ul>
-<h3>Version 1.1.3</h3>
-<ul>
-<li>Improvements to resizing logic</li>
-<li>New BaseUIComponent.reportSize method</li>
-<li>New ResizeEvent properties (bottom and right)</li>
-<li>Widget._super method called with no arguments now passes arguments from calling method</li>
-<li>Widget.getAncestor method now accepts constructor or class name</li>
-<li>Improvements to client-side logging</li>
-<li>Fix incorrect method name in CodeMirror widget</li>
-<li>Fix Promise detection logic failure in FireFox</li>
-</ul>
+
