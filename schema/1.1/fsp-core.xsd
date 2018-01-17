@@ -1861,9 +1861,19 @@
                     <xs:documentation>True if input is required for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="step" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The increment or decrement when the spinner element is clicked.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="synchronized" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>A true value means that the client will notify the server as the value of the input box changes. A false value means that the client will notify server of the new value only when the input element loses focus.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
@@ -2316,9 +2326,19 @@
                     <xs:documentation>True if input is required for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="step" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The increment or decrement when the spinner element is clicked.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="synchronized" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>A true value means that the client will notify the server as the value of the input box changes. A false value means that the client will notify server of the new value only when the input element loses focus.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
@@ -3582,9 +3602,19 @@
                     <xs:documentation>True if input is required for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="step" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The increment or decrement when the spinner element is clicked.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="synchronized" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>A true value means that the client will notify the server as the value of the input box changes. A false value means that the client will notify server of the new value only when the input element loses focus.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
@@ -4345,9 +4375,19 @@
                     <xs:documentation>True if input is required for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="step" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The increment or decrement when the spinner element is clicked.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="synchronized" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>A true value means that the client will notify the server as the value of the input box changes. A false value means that the client will notify server of the new value only when the input element loses focus.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
