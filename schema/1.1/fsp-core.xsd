@@ -958,6 +958,11 @@
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="sizable" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, the column may be resized.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="sortBy" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name of the model property to be used for sorting.</xs:documentation>
@@ -2378,6 +2383,11 @@
                 <xs:element maxOccurs="1" minOccurs="0" ref="fsp:columns"/>
                 <xs:element maxOccurs="1" minOccurs="0" ref="fsp:rows"/>
             </xs:all>
+            <xs:attribute name="autoSize" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, columns automatically resize based on their content.  Default is true.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="balloon" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The balloon text to be displayed adjacent to the component.</xs:documentation>
