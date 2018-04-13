@@ -1,0 +1,187 @@
+<xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>Fujion Server Page, Barcode Extension, version 2.0</xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
+    <xs:element name="barcode" substitutionGroup="fsp:anyParent">
+        <xs:annotation>
+            <xs:documentation>Barcode component.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="balloon" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The balloon text to be displayed adjacent to the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="class" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Space-delimited list of CSS classes.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="context" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup component that will appear when right-clicking on this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="controller" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Controller to be wired to this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="css" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The CSS specifier for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="data" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="disabled" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>True if the component is disabled.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="displayValue" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, display the value in plain text.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dragid" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A space-delimited list of drag id's associated with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dropid" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A space-delimited list of drop id's associated with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="flat" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, suppresses rendering of guard bars.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="flex" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's flex style setting.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="focus" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="code128" name="format" type="fsp:barcode_format">
+                <xs:annotation>
+                    <xs:documentation>The barcode format.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="forward" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="height" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's height.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hint" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup text to be displayed when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="if" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If false, prevent component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="impl" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Component implementation class to substitute.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="keycapture" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The list of key codes to be captured.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="namespace" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="popup" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="style" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="0" name="tabindex" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The tab index for the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="unless" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, prevent component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The value to encode.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="true" name="visible" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>The visibility state of the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="width" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's width.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="barcode_format">
+        <xs:union memberTypes="fsp:el">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="codabar"/>
+                    <xs:enumeration value="code128"/>
+                    <xs:enumeration value="code128a"/>
+                    <xs:enumeration value="code128b"/>
+                    <xs:enumeration value="code128c"/>
+                    <xs:enumeration value="code39"/>
+                    <xs:enumeration value="ean13"/>
+                    <xs:enumeration value="ean2"/>
+                    <xs:enumeration value="ean5"/>
+                    <xs:enumeration value="ean8"/>
+                    <xs:enumeration value="itf"/>
+                    <xs:enumeration value="itf14"/>
+                    <xs:enumeration value="msi"/>
+                    <xs:enumeration value="msi10"/>
+                    <xs:enumeration value="msi1010"/>
+                    <xs:enumeration value="msi11"/>
+                    <xs:enumeration value="msi1110"/>
+                    <xs:enumeration value="pharmacode"/>
+                    <xs:enumeration value="upc"/>
+                    <xs:enumeration value="upce"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,169 @@
+<xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>Fujion Server Page, Google Maps Extension, version 2.0</xs:documentation>
+    </xs:annotation>
+    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
+    <xs:element name="gmap" substitutionGroup="fsp:anyParent">
+        <xs:annotation>
+            <xs:documentation>Google Maps component.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:attribute name="balloon" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The balloon text to be displayed adjacent to the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="center" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The latitude and longitude of the current center of the map.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="class" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Space-delimited list of CSS classes.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="context" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup component that will appear when right-clicking on this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="controller" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Controller to be wired to this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="css" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The CSS specifier for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="data" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="disabled" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>True if the component is disabled.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dragid" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A space-delimited list of drag id's associated with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="dropid" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>A space-delimited list of drop id's associated with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="flex" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's flex style setting.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="focus" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="forward" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="height" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's height.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="hint" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup text to be displayed when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="if" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If false, prevent component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="impl" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Component implementation class to substitute.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="keycapture" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The list of key codes to be captured.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="namespace" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="popup" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="siteKey" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The site key.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="style" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The active CSS styles for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="0" name="tabindex" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The tab index for the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="tilt" type="fsp:gmap_tilt">
+                <xs:annotation>
+                    <xs:documentation>Controls the automatic switching behavior for the angle of incidence of the map.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="unless" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, prevent component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="true" name="visible" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>The visibility state of the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="width" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The component's width.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="zoom" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The zoom value.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:anyAttribute namespace="##other" processContents="lax"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="gmap_tilt">
+        <xs:union memberTypes="fsp:el">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="forty_five"/>
+                    <xs:enumeration value="zero"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+</xs:schema>
