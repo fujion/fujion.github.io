@@ -4,56 +4,82 @@
 <h3>Version 2.0.0</h3>
 <h4>06-Apr-2018</h4>
 <ul>
-<li>Script engine version updates.</li>
-<li>Model and view support for ColorPicker, Columns, ImagePicker, Menu, Menupopup, and Tabview components.</li>
-<li>PropertyGetter, PropertySetter, and FactorParameter annotations now inherited.</li>
-<li>Highcharts version update to 6.0.7.</li>
-<li>Highcharts support for additional plots and settings.</li>
-<li>Additional method signatures for EventUtil.toEvent.</li>
-<li>Track dependent component lifecycle with BaseComponent.trackComponent/untrackComponent/onDestroyTracked.</li>
-<li>BaseScriptComponent.getSelf renamed to getSelfName</li>
-<li>New BaseScriptComponent.includeNamedComponents property.</li>
-<li>New BaseScriptComponent.self property for setting component referenced by self in scripts.</li>
-<li>CodeMirror version update to 5.34.0.</li>
-<li>New BarCode component.</li>
-<li>Support for dynamically created web resources.</li>
-<li>New Captcha component.</li>
-<li>Improved webjar processing.</li>
-<li>New IAutoWired.beforeInitialized method.</li>
-<li>AngularJS version update to 5.0.</li>
-<li>Spring Framework version update to 5.0</li>
-<li>Log4J version update to 2.10</li>
-<li>New BaseComponent.findAllNamed method.</li>
-<li>Improved client-side argument resolution when processing client invocations.</li>
-<li>Refactoring of script components.</li>
-<li>Refactoring of Options/OptionMap classes.</li>
-<li>New Option annotation for better control of option serialization.</li>
-<li>New Plotly charting component.</li>
-<li>New StrUtil.toCamelCaseLower/toCamelCaseUpper methods.</li>
-<li>New CyclicIterator class.</li>
-<li>New Chart.js component.</li>
-<li>Support for client invocation callbacks.</li>
-<li>New ITypedEventListener interface.</li>
-<li>New id property for client-generated events.</li>
-<li>New BaseComponent.fireEventToClient methods.</li>
-<li>New IEnumWithValue interface.</li>
-<li>Fixed alert dialog positioning anomaly.</li>
-<li>New Canvas component.</li>
-<li>Fixed group box sizing issue.</li>
-<li>Improved serialization of data sent from client.</li>
-<li>New Google Map component.</li>
-<li>React Framework version upgrade to 16.1.0</li>
-<li>New Sparkline component.</li>
-<li>Refactoring of schema generator.</li>
-<li>New BaseUIComponent.print method.</li>
-<li>New BaseComponent.isRendered method.</li>
-<li>New bindable attribute for PropertyGetter/PropertySetter annotation.</li>
-<li>New EventUtil.echo method.</li>
-<li>Fix event post failure when using ExecutionContext.invoke.</li>
-<li>New CKEditor component.</li>
-<li>Support for Babel transpiler.</li>
-<li>New spinjs component.</li>
-<li>Caching of compiled EL expressions.</li>
-<li>Support for 3rd party icon libraries.</li>
+	<li>New components</li>
+		<ul>
+			<li>BarCode</li>
+			<li>Canvas</li>
+			<li>Captcha</li>
+			<li>Chart.js</li>
+			<li>CKEditor</li>
+			<li>Google Map</li>
+			<li>Plotly</li>
+			<li>Sparkline</li>
+			<li>spinjs</li>
+		</ul>
+	<li>Component updates</li>
+		<ul>
+			<li>AngularJS version update to 5.0.</li>
+			<li>CodeMirror version update to 5.34.0.</li>
+			<li>Highcharts version update to 6.0.7.</li>
+			<li>Highcharts support for additional plots and settings.</li>
+			<li>Model and view support for ColorPicker, Columns, ImagePicker, Menu, Menupopup, and Tabview components.</li>
+			<li>React Framework version update to 16.1.0</li>
+		</ul>
+	<li>Scripting updates</li>
+	<ul>
+		<li>Version updates of script engines.</li>
+		<li>Refactoring of script components.</li>
+		<li>BaseScriptComponent.getSelf method renamed to getSelfName</li>
+		<li>New BaseScriptComponent.self property for setting component referenced by self in scripts.</li>
+		<li>New BaseScriptComponent.includeNamedComponents property.</li>
+		<li>Fix JRuby ArrayIndexOutOfRange error.</li>
+	</ul>
+	<li>Core updates</li>
+	<ul>
+		<li>PropertyGetter, PropertySetter, and FactorParameter annotations now inherited.</li>
+		<li>New bindable attribute for PropertyGetter/PropertySetter annotation.</li>
+		<li>Additional method signatures for EventUtil.toEvent.</li>
+		<li>New ITypedEventListener interface.</li>
+		<li>New BaseComponent.fireEventToClient methods.</li>
+		<li>New EventUtil.echo method.</li>
+		<li>Fix event post failure when using ExecutionContext.invoke.</li>
+		<li>Track dependent component lifecycle with BaseComponent.trackComponent/untrackComponent/onDestroyTracked.</li>
+		<li>Support for dynamically created web resources.</li>
+		<li>Improved webjar processing.</li>
+		<li>New IAutoWired.beforeInitialized method.</li>
+		<li>New BaseComponent.findAllNamed method.</li>
+		<li>Refactoring of Options/OptionMap classes.</li>
+		<li>New Option annotation for better control of option serialization.</li>
+		<li>New StrUtil.toCamelCaseLower/toCamelCaseUpper methods.</li>
+		<li>New CyclicIterator class.</li>
+		<li>New IEnumWithValue interface.</li>
+		<li>New BaseUIComponent.print method.</li>
+		<li>New BaseComponent.isRendered method.</li>
+		<li>Refactoring of schema generator.</li>
+		<li>Caching of compiled EL expressions.</li>
+	</ul>
+	<li>Client updates</li>
+	<ul>
+		<li>Support for client invocation callbacks.</li>
+		<li>Improved argument resolution when processing client invocations.</li>
+		<li>Improved serialization of data sent from client.</li>
+		<li>New id property for client-generated events.</li>
+		<li>Fixed alert dialog positioning anomaly.</li>
+		<li>Fixed group box sizing issue.</li>
+		<li>Support for Babel transpiler.</li>
+	</ul>
+	<li>Support for 3rd party icon collections</li>
+	<ul>
+		<li>Feather</li>
+		<li>Iconic</li>
+		<li>Material Design</li>
+		<li>Open Icon Library</li>
+		<li>Silk</li>
+	</ul>
+	<li>Library updates</li>
+	<ul>
+		<li>Spring Framework version 4.x -> 5.x</li>
+		<li>Log4J version 1.x -> 2.x</li>
+	</ul>
 </ul>
 
