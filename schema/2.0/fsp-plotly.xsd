@@ -2,7 +2,7 @@
     <xs:annotation>
         <xs:documentation>Fujion Server Page, Plotly Extension, version 2.0</xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
+    <xs:include schemaLocation="./fsp-root.xsd"/>
     <xs:element name="plotly" substitutionGroup="fsp:anyParent">
         <xs:annotation>
             <xs:documentation>Fujion wrapper for Plotly component.</xs:documentation>

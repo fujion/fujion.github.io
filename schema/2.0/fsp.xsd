@@ -4,22 +4,22 @@
         <xs:appinfo>
         		<name>Fujion Framework</name>
         		<version>2.0.0-RC3</version>
-        		<generated-on>12-Apr-2018 21:49</generated-on>
+        		<generated-on>30-Apr-2018 14:16</generated-on>
         </xs:appinfo>
     </xs:annotation>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-core.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-canvas.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-gmaps.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-angular.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-codemirror.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-ckeditor.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-highcharts.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-plotly.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-chartjs.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-sparkline.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-barcode.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-captcha.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-react.xsd"/>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-spinjs.xsd"/>
+    <xs:include schemaLocation="./fsp-root.xsd"/>
+    <xs:include schemaLocation="./fsp-core.xsd"/>
+    <xs:include schemaLocation="./fsp-canvas.xsd"/>
+    <xs:include schemaLocation="./fsp-gmaps.xsd"/>
+    <xs:include schemaLocation="./fsp-angular.xsd"/>
+    <xs:include schemaLocation="./fsp-codemirror.xsd"/>
+    <xs:include schemaLocation="./fsp-ckeditor.xsd"/>
+    <xs:include schemaLocation="./fsp-highcharts.xsd"/>
+    <xs:include schemaLocation="./fsp-plotly.xsd"/>
+    <xs:include schemaLocation="./fsp-chartjs.xsd"/>
+    <xs:include schemaLocation="./fsp-sparkline.xsd"/>
+    <xs:include schemaLocation="./fsp-barcode.xsd"/>
+    <xs:include schemaLocation="./fsp-captcha.xsd"/>
+    <xs:include schemaLocation="./fsp-react.xsd"/>
+    <xs:include schemaLocation="./fsp-spinjs.xsd"/>
 </xs:schema>
