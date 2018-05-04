@@ -113,11 +113,6 @@
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="siteKey" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>The site key.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
