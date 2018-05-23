@@ -3,8 +3,8 @@
         <xs:documentation>Fujion Server Page Schema, version 2.0</xs:documentation>
         <xs:appinfo>
         		<name>Fujion Framework</name>
-        		<version>2.0.0-RC5</version>
-        		<generated-on>04-May-2018 11:30</generated-on>
+        		<version>2.0.0-RC7</version>
+        		<generated-on>23-May-2018 06:59</generated-on>
         </xs:appinfo>
     </xs:annotation>
     <xs:include schemaLocation="./fsp-root.xsd"/>

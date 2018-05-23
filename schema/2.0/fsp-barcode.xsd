@@ -73,6 +73,11 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute default="code128" name="format" type="fsp:barcode_format">
                 <xs:annotation>
                     <xs:documentation>The barcode format.</xs:documentation>

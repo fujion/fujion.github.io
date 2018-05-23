@@ -63,6 +63,11 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -194,6 +199,11 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
