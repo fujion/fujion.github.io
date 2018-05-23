@@ -68,6 +68,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -227,6 +232,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -390,6 +400,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -536,6 +551,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -687,6 +707,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -842,6 +867,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -946,6 +976,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1124,6 +1159,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -1278,6 +1318,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1468,6 +1513,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -1586,6 +1636,11 @@
                     <xs:attribute name="foreach" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
@@ -1711,6 +1766,11 @@
             <xs:attribute default="yyyy-MM-dd" name="format" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The format for displaying the date.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1889,6 +1949,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -2082,6 +2147,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2233,6 +2303,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2369,6 +2444,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -2568,6 +2648,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2712,6 +2797,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -2864,6 +2954,11 @@
                             <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3007,6 +3102,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3162,6 +3262,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3306,6 +3411,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3461,6 +3571,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3562,6 +3677,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3705,6 +3825,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3895,6 +4020,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4036,6 +4166,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4204,6 +4339,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4362,6 +4502,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4513,6 +4658,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4713,6 +4863,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4911,6 +5066,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5072,6 +5232,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -5237,6 +5402,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5345,6 +5515,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5451,6 +5626,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -5609,6 +5789,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5755,6 +5940,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5896,6 +6086,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5995,6 +6190,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -6108,6 +6308,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -6266,6 +6471,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6417,6 +6627,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6518,6 +6733,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6617,6 +6837,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -6812,6 +7037,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6970,6 +7200,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7121,6 +7356,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7265,6 +7505,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7418,6 +7663,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7567,6 +7817,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7722,6 +7977,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7853,6 +8113,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7964,6 +8229,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8064,6 +8334,11 @@
                             <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8149,6 +8424,11 @@
                     <xs:attribute name="foreach" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
@@ -8262,6 +8542,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8420,6 +8705,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8531,6 +8821,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8632,6 +8927,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8827,6 +9127,11 @@
                     <xs:documentation>Format for displaying the time.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8960,6 +9265,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -9079,6 +9389,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -9230,6 +9545,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -9386,6 +9706,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -9556,6 +9881,11 @@
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -9720,6 +10050,11 @@
             <xs:attribute name="foreach" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
