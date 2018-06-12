@@ -1,11 +1,11 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page, Highcharts Extension, version 2.0</xs:documentation>
+        <xs:documentation>Fujion Server Page, spin.js Extension, version 2.0</xs:documentation>
     </xs:annotation>
     <xs:include schemaLocation="./fsp-root.xsd"/>
-    <xs:element name="hchart" substitutionGroup="fsp:anyParent">
+    <xs:element name="spinjs" substitutionGroup="fsp:anyParent">
         <xs:annotation>
-            <xs:documentation>Fujion wrapper for HighCharts component.</xs:documentation>
+            <xs:documentation>Spin-js component.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:attribute name="balloon" type="xs:string">
@@ -18,6 +18,11 @@
                     <xs:documentation>Space-delimited list of CSS classes.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="true" name="clockwise" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, the rotation is clockwise.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="context" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when right-clicking on this component.</xs:documentation>
@@ -26,6 +31,11 @@
             <xs:attribute name="controller" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Controller to be wired to this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="1" name="corners" type="fsp:decimal">
+                <xs:annotation>
+                    <xs:documentation>The corner roundness.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="css" type="xs:string">
@@ -51,6 +61,11 @@
             <xs:attribute name="dropid" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>A space-delimited list of drop id's associated with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="transparent" name="fadecolor" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The color(s) for the fade effect.  Separate multiple colors with commas.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="flex" type="xs:string">
@@ -103,6 +118,31 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="50%" name="left" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The left position relative to parent.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="#000" name="linecolor" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The line color(s).  Separate multiple colors with commas.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="7" name="linelength" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The length of each line.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="12" name="lines" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The number of lines to draw.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="5" name="linewidth" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The width of each line.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -113,9 +153,44 @@
                     <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="0.25" name="opacity" type="fsp:decimal">
+                <xs:annotation>
+                    <xs:documentation>The opacity of the lines.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="10" name="radius" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The radius of the inner circle.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="0" name="rotate" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The rotation offset.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="1" name="scale" type="fsp:decimal">
+                <xs:annotation>
+                    <xs:documentation>The overall size of the spinner.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="none" name="shadow" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The box-shadow for the lines.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="1" name="speed" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>Rounds per second.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="false" name="start" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>Starts or stops the animation.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="style" type="xs:string">
@@ -123,24 +198,19 @@
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="subtitle" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>The subtitle text.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
                 <xs:annotation>
                     <xs:documentation>The tab index for the component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="title" type="xs:string">
+            <xs:attribute default="50%" name="top" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>The title text.</xs:documentation>
+                    <xs:documentation>The top position relative to parent.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute default="line" name="type" type="fsp:hchart_type">
+            <xs:attribute default="100" name="trail" type="fsp:integer">
                 <xs:annotation>
-                    <xs:documentation>The chart type.</xs:documentation>
+                    <xs:documentation>The after-glow percentage.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="unless" type="fsp:boolean">
@@ -161,49 +231,4 @@
             <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
-    <xs:simpleType name="hchart_type">
-        <xs:union memberTypes="fsp:el">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:enumeration value="area"/>
-                    <xs:enumeration value="arearange"/>
-                    <xs:enumeration value="areaspline"/>
-                    <xs:enumeration value="areasplinerange"/>
-                    <xs:enumeration value="bar"/>
-                    <xs:enumeration value="bellcurve"/>
-                    <xs:enumeration value="boxplot"/>
-                    <xs:enumeration value="bubble"/>
-                    <xs:enumeration value="bullet"/>
-                    <xs:enumeration value="column"/>
-                    <xs:enumeration value="columnrange"/>
-                    <xs:enumeration value="errorbar"/>
-                    <xs:enumeration value="funnel"/>
-                    <xs:enumeration value="gauge"/>
-                    <xs:enumeration value="heatmap"/>
-                    <xs:enumeration value="histogram"/>
-                    <xs:enumeration value="line"/>
-                    <xs:enumeration value="pareto"/>
-                    <xs:enumeration value="pie"/>
-                    <xs:enumeration value="polygon"/>
-                    <xs:enumeration value="pyramid"/>
-                    <xs:enumeration value="sankey"/>
-                    <xs:enumeration value="scatter"/>
-                    <xs:enumeration value="scatter3d"/>
-                    <xs:enumeration value="solidgauge"/>
-                    <xs:enumeration value="spline"/>
-                    <xs:enumeration value="streamgraph"/>
-                    <xs:enumeration value="sunburst"/>
-                    <xs:enumeration value="tilemap"/>
-                    <xs:enumeration value="treemap"/>
-                    <xs:enumeration value="variablepie"/>
-                    <xs:enumeration value="variwide"/>
-                    <xs:enumeration value="vector"/>
-                    <xs:enumeration value="waterfall"/>
-                    <xs:enumeration value="windbarb"/>
-                    <xs:enumeration value="wordcloud"/>
-                    <xs:enumeration value="xrange"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:union>
-    </xs:simpleType>
 </xs:schema>

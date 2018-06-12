@@ -1,8 +1,8 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page, Core Schema, version 1.1</xs:documentation>
+        <xs:documentation>Fujion Server Page, Core Schema, version 2.0</xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
+    <xs:include schemaLocation="./fsp-root.xsd"/>
     <xs:element name="button" substitutionGroup="fsp:anyParent">
         <xs:annotation>
             <xs:documentation>A simple button component.</xs:documentation>
@@ -61,6 +61,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -219,6 +229,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -375,6 +395,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -516,6 +546,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -664,6 +704,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -709,6 +759,11 @@
                     <xs:documentation>The minimum allowable value, if any.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -737,6 +792,11 @@
             <xs:attribute default="false" name="readonly" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>True if the input box is read-only.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="false" name="required" type="fsp:boolean">
@@ -800,6 +860,16 @@
             <xs:attribute name="data" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -901,6 +971,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1074,6 +1154,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -1104,6 +1194,11 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -1117,6 +1212,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="style" type="xs:string">
@@ -1215,6 +1315,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -1260,6 +1370,11 @@
                     <xs:documentation>The minimum allowable value, if any.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -1288,6 +1403,11 @@
             <xs:attribute default="false" name="readonly" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>True if the input box is read-only.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="false" name="required" type="fsp:boolean">
@@ -1386,6 +1506,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1503,6 +1633,16 @@
                             <xs:documentation>Data object to associate with this component.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute name="foreach" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -1518,6 +1658,11 @@
                             <xs:documentation>Component implementation class to substitute.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute default="true" name="includeNamedComponents" type="fsp:boolean">
+                        <xs:annotation>
+                            <xs:documentation>If true, any named components within the namespace occupied by "self" will be passed as arguments to the script.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="mode" type="fsp:cscript_mode">
                         <xs:annotation>
                             <xs:documentation>The script's execution mode.</xs:documentation>
@@ -1531,6 +1676,11 @@
                     <xs:attribute name="namespace" type="fsp:boolean">
                         <xs:annotation>
                             <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="self" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>The component to be referenced by the script language's "self" variable.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:attribute name="src" type="xs:string">
@@ -1608,9 +1758,19 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute default="yyyy-MM-dd" name="format" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The format for displaying the date.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1784,6 +1944,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -1972,6 +2142,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2118,6 +2298,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2249,6 +2439,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -2443,6 +2643,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2582,6 +2792,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -2729,6 +2949,16 @@
                             <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute name="foreach" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -2867,6 +3097,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3017,6 +3257,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3158,6 +3408,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3203,6 +3463,11 @@
                     <xs:documentation>The minimum allowable value, if any.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -3231,6 +3496,11 @@
             <xs:attribute default="false" name="readonly" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>True if the input box is read-only.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="false" name="required" type="fsp:boolean">
@@ -3294,6 +3564,16 @@
             <xs:attribute name="data" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3392,6 +3672,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3530,6 +3820,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -3715,6 +4015,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -3851,6 +4161,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4014,6 +4334,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4044,6 +4374,11 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute default="false" name="multiple" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>If true, multiple list items may be selected at once.</xs:documentation>
@@ -4062,6 +4397,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="size" type="fsp:integer">
@@ -4155,6 +4495,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4303,6 +4653,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4498,6 +4858,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4691,6 +5061,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -4731,6 +5111,11 @@
                     <xs:documentation>The text label.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -4749,6 +5134,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="style" type="xs:string">
@@ -4837,6 +5227,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -4997,6 +5397,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5100,6 +5510,16 @@
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5115,6 +5535,11 @@
                     <xs:documentation>Component implementation class to substitute.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -5123,6 +5548,11 @@
             <xs:attribute name="namespace" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="unless" type="fsp:boolean">
@@ -5191,6 +5621,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -5344,6 +5784,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5485,6 +5935,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5621,6 +6081,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -5715,6 +6185,16 @@
             <xs:attribute name="data" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -5823,6 +6303,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -5976,6 +6466,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6122,6 +6622,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6218,6 +6728,16 @@
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6312,6 +6832,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -6502,6 +7032,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6655,6 +7195,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6801,6 +7351,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -6940,6 +7500,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7088,6 +7658,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7234,6 +7814,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7264,6 +7854,11 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -7277,6 +7872,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="no" name="selectable" type="fsp:rows_selectable">
@@ -7370,6 +7970,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7480,6 +8090,9 @@
             <xs:documentation>A Fujion resource that can be inserted into a template.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
+            <xs:all>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="fsp:snippet"/>
+            </xs:all>
             <xs:attribute name="anchor" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name of the anchor component within the template.</xs:documentation>
@@ -7493,6 +8106,16 @@
             <xs:attribute name="data" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7520,7 +8143,7 @@
                     <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute default="child" name="position" type="fsp:snippet_position">
+            <xs:attribute default="last" name="position" type="fsp:snippet_position">
                 <xs:annotation>
                     <xs:documentation>The insertion point of the snippet relative to its anchor.</xs:documentation>
                 </xs:annotation>
@@ -7599,6 +8222,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -7696,6 +8329,16 @@
                             <xs:documentation>Data object to associate with this component.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute name="foreach" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -7711,6 +8354,11 @@
                             <xs:documentation>Component implementation class to substitute.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
+                    <xs:attribute default="true" name="includeNamedComponents" type="fsp:boolean">
+                        <xs:annotation>
+                            <xs:documentation>If true, any named components within the namespace occupied by "self" will be passed as arguments to the script.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
                     <xs:attribute name="mode" type="fsp:sscript_mode">
                         <xs:annotation>
                             <xs:documentation>The script's execution mode.</xs:documentation>
@@ -7724,6 +8372,11 @@
                     <xs:attribute name="namespace" type="fsp:boolean">
                         <xs:annotation>
                             <xs:documentation>When true, this component acts as a namespace boundary.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="self" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>The component to be referenced by the script language's "self" variable.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:attribute name="src" type="xs:string">
@@ -7766,6 +8419,16 @@
                     <xs:attribute name="data" type="xs:string">
                         <xs:annotation>
                             <xs:documentation>Data object to associate with this component.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute name="foreach" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                    <xs:attribute default="each" name="forvar" type="xs:string">
+                        <xs:annotation>
+                            <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                         </xs:annotation>
                     </xs:attribute>
                     <xs:attribute name="forward" type="xs:string">
@@ -7874,6 +8537,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8027,6 +8700,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8057,6 +8740,11 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -8070,6 +8758,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="style" type="xs:string">
@@ -8121,6 +8814,16 @@
             <xs:attribute name="data" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8219,6 +8922,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8404,9 +9117,19 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute default="HH:mm:ss" name="format" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Format for displaying the time.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8537,6 +9260,16 @@
                     <xs:documentation>Data object to associate with this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8651,6 +9384,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8797,6 +9540,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -8950,6 +9703,16 @@
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>Sets one or more event forwarding directives.</xs:documentation>
@@ -8980,6 +9743,11 @@
                     <xs:documentation>The list of key codes to be captured.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="model" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The model to be associated with the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The name associated with this component instance (must be unique within the enclosing namespace).</xs:documentation>
@@ -8993,6 +9761,11 @@
             <xs:attribute name="popup" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="renderer" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The renderer to be associated with the model.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="true" name="showLines" type="fsp:boolean">
@@ -9101,6 +9874,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -9262,6 +10045,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
@@ -9535,7 +10328,8 @@
                 <xs:restriction base="xs:string">
                     <xs:enumeration value="after"/>
                     <xs:enumeration value="before"/>
-                    <xs:enumeration value="child"/>
+                    <xs:enumeration value="first"/>
+                    <xs:enumeration value="last"/>
                     <xs:enumeration value="parent"/>
                     <xs:enumeration value="replace"/>
                 </xs:restriction>

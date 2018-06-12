@@ -1,16 +1,21 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page, Highcharts Extension, version 2.0</xs:documentation>
+        <xs:documentation>Fujion Server Page, Google Maps Extension, version 2.0</xs:documentation>
     </xs:annotation>
     <xs:include schemaLocation="./fsp-root.xsd"/>
-    <xs:element name="hchart" substitutionGroup="fsp:anyParent">
+    <xs:element name="gmap" substitutionGroup="fsp:anyParent">
         <xs:annotation>
-            <xs:documentation>Fujion wrapper for HighCharts component.</xs:documentation>
+            <xs:documentation>Google Maps component.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:attribute name="balloon" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The balloon text to be displayed adjacent to the component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="center" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The latitude and longitude of the current center of the map.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="class" type="xs:string">
@@ -123,24 +128,14 @@
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="subtitle" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>The subtitle text.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
                 <xs:annotation>
                     <xs:documentation>The tab index for the component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="title" type="xs:string">
+            <xs:attribute name="tilt" type="fsp:gmap_tilt">
                 <xs:annotation>
-                    <xs:documentation>The title text.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
-            <xs:attribute default="line" name="type" type="fsp:hchart_type">
-                <xs:annotation>
-                    <xs:documentation>The chart type.</xs:documentation>
+                    <xs:documentation>Controls the automatic switching behavior for the angle of incidence of the map.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="unless" type="fsp:boolean">
@@ -158,50 +153,20 @@
                     <xs:documentation>The component's width.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute name="zoom" type="fsp:integer">
+                <xs:annotation>
+                    <xs:documentation>The zoom value.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
-    <xs:simpleType name="hchart_type">
+    <xs:simpleType name="gmap_tilt">
         <xs:union memberTypes="fsp:el">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:enumeration value="area"/>
-                    <xs:enumeration value="arearange"/>
-                    <xs:enumeration value="areaspline"/>
-                    <xs:enumeration value="areasplinerange"/>
-                    <xs:enumeration value="bar"/>
-                    <xs:enumeration value="bellcurve"/>
-                    <xs:enumeration value="boxplot"/>
-                    <xs:enumeration value="bubble"/>
-                    <xs:enumeration value="bullet"/>
-                    <xs:enumeration value="column"/>
-                    <xs:enumeration value="columnrange"/>
-                    <xs:enumeration value="errorbar"/>
-                    <xs:enumeration value="funnel"/>
-                    <xs:enumeration value="gauge"/>
-                    <xs:enumeration value="heatmap"/>
-                    <xs:enumeration value="histogram"/>
-                    <xs:enumeration value="line"/>
-                    <xs:enumeration value="pareto"/>
-                    <xs:enumeration value="pie"/>
-                    <xs:enumeration value="polygon"/>
-                    <xs:enumeration value="pyramid"/>
-                    <xs:enumeration value="sankey"/>
-                    <xs:enumeration value="scatter"/>
-                    <xs:enumeration value="scatter3d"/>
-                    <xs:enumeration value="solidgauge"/>
-                    <xs:enumeration value="spline"/>
-                    <xs:enumeration value="streamgraph"/>
-                    <xs:enumeration value="sunburst"/>
-                    <xs:enumeration value="tilemap"/>
-                    <xs:enumeration value="treemap"/>
-                    <xs:enumeration value="variablepie"/>
-                    <xs:enumeration value="variwide"/>
-                    <xs:enumeration value="vector"/>
-                    <xs:enumeration value="waterfall"/>
-                    <xs:enumeration value="windbarb"/>
-                    <xs:enumeration value="wordcloud"/>
-                    <xs:enumeration value="xrange"/>
+                    <xs:enumeration value="forty_five"/>
+                    <xs:enumeration value="zero"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:union>

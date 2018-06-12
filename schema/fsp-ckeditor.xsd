@@ -1,11 +1,11 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page, Highcharts Extension, version 2.0</xs:documentation>
+        <xs:documentation>Fujion Server Page, CKEditor Extension, version 2.0</xs:documentation>
     </xs:annotation>
     <xs:include schemaLocation="./fsp-root.xsd"/>
-    <xs:element name="hchart" substitutionGroup="fsp:anyParent">
+    <xs:element name="ckeditor" substitutionGroup="fsp:anyParent">
         <xs:annotation>
-            <xs:documentation>Fujion wrapper for HighCharts component.</xs:documentation>
+            <xs:documentation>CKEditor component.</xs:documentation>
         </xs:annotation>
         <xs:complexType>
             <xs:attribute name="balloon" type="xs:string">
@@ -118,14 +118,19 @@
                     <xs:documentation>The popup component that will appear when hovering over this component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
+            <xs:attribute default="false" name="readonly" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>True if the input box is read-only.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="true" name="sizable" type="fsp:boolean">
+                <xs:annotation>
+                    <xs:documentation>If true, a sizer grip allows manual resizing of the editor.  If false, the editor size matches the container size.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
             <xs:attribute name="style" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>The active CSS styles for this component.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
-            <xs:attribute name="subtitle" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>The subtitle text.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="0" name="tabindex" type="fsp:integer">
@@ -133,19 +138,14 @@
                     <xs:documentation>The tab index for the component.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
-            <xs:attribute name="title" type="xs:string">
-                <xs:annotation>
-                    <xs:documentation>The title text.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
-            <xs:attribute default="line" name="type" type="fsp:hchart_type">
-                <xs:annotation>
-                    <xs:documentation>The chart type.</xs:documentation>
-                </xs:annotation>
-            </xs:attribute>
             <xs:attribute name="unless" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>If true, prevent component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="value" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>The input value as a string.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute default="true" name="visible" type="fsp:boolean">
@@ -161,49 +161,4 @@
             <xs:anyAttribute namespace="##other" processContents="lax"/>
         </xs:complexType>
     </xs:element>
-    <xs:simpleType name="hchart_type">
-        <xs:union memberTypes="fsp:el">
-            <xs:simpleType>
-                <xs:restriction base="xs:string">
-                    <xs:enumeration value="area"/>
-                    <xs:enumeration value="arearange"/>
-                    <xs:enumeration value="areaspline"/>
-                    <xs:enumeration value="areasplinerange"/>
-                    <xs:enumeration value="bar"/>
-                    <xs:enumeration value="bellcurve"/>
-                    <xs:enumeration value="boxplot"/>
-                    <xs:enumeration value="bubble"/>
-                    <xs:enumeration value="bullet"/>
-                    <xs:enumeration value="column"/>
-                    <xs:enumeration value="columnrange"/>
-                    <xs:enumeration value="errorbar"/>
-                    <xs:enumeration value="funnel"/>
-                    <xs:enumeration value="gauge"/>
-                    <xs:enumeration value="heatmap"/>
-                    <xs:enumeration value="histogram"/>
-                    <xs:enumeration value="line"/>
-                    <xs:enumeration value="pareto"/>
-                    <xs:enumeration value="pie"/>
-                    <xs:enumeration value="polygon"/>
-                    <xs:enumeration value="pyramid"/>
-                    <xs:enumeration value="sankey"/>
-                    <xs:enumeration value="scatter"/>
-                    <xs:enumeration value="scatter3d"/>
-                    <xs:enumeration value="solidgauge"/>
-                    <xs:enumeration value="spline"/>
-                    <xs:enumeration value="streamgraph"/>
-                    <xs:enumeration value="sunburst"/>
-                    <xs:enumeration value="tilemap"/>
-                    <xs:enumeration value="treemap"/>
-                    <xs:enumeration value="variablepie"/>
-                    <xs:enumeration value="variwide"/>
-                    <xs:enumeration value="vector"/>
-                    <xs:enumeration value="waterfall"/>
-                    <xs:enumeration value="windbarb"/>
-                    <xs:enumeration value="wordcloud"/>
-                    <xs:enumeration value="xrange"/>
-                </xs:restriction>
-            </xs:simpleType>
-        </xs:union>
-    </xs:simpleType>
 </xs:schema>

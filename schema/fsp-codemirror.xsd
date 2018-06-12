@@ -1,8 +1,8 @@
 <xs:schema xmlns:fsp="http://www.fujion.org/schema/fsp" elementFormDefault="qualified" targetNamespace="http://www.fujion.org/schema/fsp" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:annotation>
-        <xs:documentation>Fujion Server Page, CodeMirror Extension, version 1.1</xs:documentation>
+        <xs:documentation>Fujion Server Page, CodeMirror Extension, version 2.0</xs:documentation>
     </xs:annotation>
-    <xs:include schemaLocation="http://www.fujion.org/schema/fsp-root.xsd"/>
+    <xs:include schemaLocation="./fsp-root.xsd"/>
     <xs:element name="codemirror" substitutionGroup="fsp:anyParent">
         <xs:annotation>
             <xs:documentation>Fujion wrapper for CodeMirror JavaScript editor.</xs:documentation>
@@ -61,6 +61,16 @@
             <xs:attribute default="false" name="focus" type="fsp:boolean">
                 <xs:annotation>
                     <xs:documentation>Sets or removes focus for this component.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute name="foreach" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies a collection for iterative component creation.</xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+            <xs:attribute default="each" name="forvar" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Specifies the attribute name used in foreach.</xs:documentation>
                 </xs:annotation>
             </xs:attribute>
             <xs:attribute name="forward" type="xs:string">
